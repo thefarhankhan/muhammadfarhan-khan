@@ -1,4 +1,19 @@
 <section class="custom-banner">
+
+  <div class="banner-header">
+    <h3 class="banner-title">
+      {{ section.settings.heading }}
+    </h3>
+
+    <p class="banner-text">
+      {{ section.settings.subtext }}
+    </p>
+
+    <a href="{{ section.settings.button_link }}" class="btn-primary">
+      {{ section.settings.button_text }}
+    </a>
+  </div>
+  
   <div class="banner-inner">
 
     <h1 class="banner-title">
@@ -14,6 +29,12 @@
     </a>
 
   </div>
+  <div>
+    <p class="banner-text">
+      {{ section.settings.subtext }}
+    </p>
+  </div>
+
 </section>
 
 {% schema %}
