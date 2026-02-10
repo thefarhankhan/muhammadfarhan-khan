@@ -1,18 +1,53 @@
-<div style="padding:40px;background:red;color:white;">
-  BANNER TEST VISIBLE
-</div>
+<section class="custom-banner">
+  <div class="banner-inner">
+
+    <h1 class="banner-title">
+      {{ section.settings.heading }}
+    </h1>
+
+    <p class="banner-text">
+      {{ section.settings.subtext }}
+    </p>
+
+    <a href="{{ section.settings.button_link }}" class="btn-primary">
+      {{ section.settings.button_text }}
+    </a>
+
+  </div>
+</section>
 
 {% schema %}
 {
-  "name": "Custom Hero Banner",
+  "name": "Custom Banner",
   "settings": [
-    { "type": "text", "id": "brand", "label": "Brand text" },
-    { "type": "text", "id": "tagline", "label": "Top tagline" },
-    { "type": "Button", "id": "button_text", "label": "Button text" },
-    { "type": "text", "id": "heading", "label": "Main heading" },
-    { "type": "text", "id": "secondary_text", "label": "Secondary label" },
-    { "type": "Button", "id": "button_link", "label": "Button link" },
-    { "type": "text", "id": "secondary_text", "label": "Secondary label" }
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Welcome to Our Store"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Discover our best products"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner"
+    }
   ]
 }
 {% endschema %}
