@@ -2,11 +2,25 @@
 .custom-banner {
   text-align: center;
   padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.banner-inner {
+    display: flex;
+    flex-direction: column;
 }
 
 .banner-title {
-  font-size: 64px;
-  font-weight: 700;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
 }
 
 .banner-text {
