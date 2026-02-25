@@ -1,0 +1,24 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+{{ 'custom.js' | asset_url | script_tag }}
+
+<div class="custom-test-page">
+
+  {% section 'custom-banner' %}
+  {% section 'custom-product-grid' %}
+
+  <!-- Global Popup -->
+  <div id="product-popup" class="popup hidden">
+    <div class="popup-content">
+      <button id="close-popup" class="popup-close">×</button>
+
+      <div id="popup-body">
+        <!-- Filled dynamically by JS -->
+      </div>
+
+      <button id="add-to-cart-btn" class="btn-primary">
+        ADD TO CART
+      </button>
+    </div>
+  </div>
+
+</div>
